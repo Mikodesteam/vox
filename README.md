@@ -56,9 +56,17 @@ A self-hosted voice assistant that holds real two-way phone calls through Twilio
 - **PC actions with plan, confirm and undo**: 17 file/system actions and desktop cleanup, never deletes, journal and undo.
 - **Mouse and keyboard control**: Each step confirmed by a human.
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**Call rings with a mandatory AI disclosure**: [`snippets/rings.py`](snippets/rings.py). Every outbound call is classified into a ring before it is placed. Unknown numbers always fall toward the AI disclosure, there is no switch to turn it off, and cold calling is blocked in code.
+Real excerpts from the source, shown for illustration:
+
+- **Call rings with a mandatory AI disclosure** ([`snippets/rings.py`](snippets/rings.py)): Every outbound call is classified into a ring before it is placed. Unknown numbers always fall toward the AI disclosure, there is no switch to turn it off, and cold calling is blocked in code.
+- **Proof the AI disclosure was actually heard** ([`snippets/playout_marks.py`](snippets/playout_marks.py)): The disclosure only counts once the phone provider echoes back a marker that sits behind its audio. An echo is accepted once, for the right stream, for a marker the server really sent. Anything else is ignored.
+- **Own-number and own-channel verification** ([`snippets/code_verification.py`](snippets/code_verification.py)): A destination only counts as the user's own after they read back a 6-digit code. Only a salted hash is stored, codes expire in 10 minutes, five wrong tries cancel it, and the check is constant-time.
 
 ## Requirements (full version)
 
