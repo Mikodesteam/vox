@@ -8,6 +8,8 @@
   <b>AI voice assistant that calls you, with SaaS billing.</b>
 </p>
 
+<p align="center"><sub>AI voice assistant source code · AI phone calls with Twilio & Telnyx · self-hosted SaaS</sub></p>
+
 <p align="center">
   <a href="https://vox-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://vox.mikodes.com/docs/"><b>Docs</b></a> ·
@@ -78,6 +80,20 @@ Real excerpts from the source, shown for illustration:
 - Optional: Stripe account
 
 Not included: Hosting, domain and TLS certificate; Anthropic, ElevenLabs, Twilio/Telnyx, Stripe and Google accounts and their usage fees; Phone numbers and any telecom registration required in the operator's country; Legal advice on calling rules; A native mobile or desktop app, a wake word, push notifications.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete VOX source code is sold at [store.mikodes.com/p/vox](https://store.mikodes.com/p/vox/).
+
+**What is VOX built with?**  
+Node.js, Python.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://vox-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
